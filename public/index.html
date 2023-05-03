@@ -46,7 +46,7 @@
       ];
       (function fetchAPI() {
         fetch(
-          "http://localhost:9088/v1/forms/runtime/fetch-resources?fileName=forms.js&formId=1128874f-b523-49db-b2c6-a798d87d34&domainName=http://localhost:3001"
+          "https://qa-api.txtbox.in/v1/forms/runtime/fetch-resources?fileName=forms.js&formId=1128874f-b523-49db-b2c6-a798d87d34&domainName=http://localhost:3001"
         )
           .then((response) => response.arrayBuffer())
           .then((buffer) => {

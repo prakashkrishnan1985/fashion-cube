@@ -36,7 +36,8 @@ class NavBar extends Component {
 
   loadForm = () => {
     let modalContent = document.getElementById('1128874f-b523-49db-b2c6-a798d87d41');
-    modalContent.style.display = "block";
+    if(modalContent)
+      modalContent.style.display = "block";
   };
 
   render() {
