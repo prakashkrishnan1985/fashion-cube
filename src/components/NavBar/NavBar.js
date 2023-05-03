@@ -33,6 +33,12 @@ class NavBar extends Component {
   handleMenuClicked = () => {
     this.setState({ activeclass: !this.state.activeclass });
   };
+
+  loadForm = () => {
+    let modalContent = document.getElementById('1128874f-b523-49db-b2c6-a798d87d41');
+    modalContent.style.display = "block";
+  };
+
   render() {
     const { departments, cart } = this.props;
 
@@ -84,7 +90,9 @@ class NavBar extends Component {
                   </li>
 
                   <li>
-                    <a href="contact.html">contact</a>
+                    <a href="#" onClick={() => this.loadForm()}>
+                      contact
+                    </a>
                   </li>
                 </ul>
                 <ul className="navbar_user">

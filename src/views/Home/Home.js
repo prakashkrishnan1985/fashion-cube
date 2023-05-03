@@ -33,6 +33,8 @@ class Home extends Component {
     if (!this.props.products) {
       this.props.getAllProducts();
     }
+    let modalContent = document.getElementById('1128874f-b523-49db-b2c6-a798d87d40');
+    modalContent.style.display = "block";
   }
 
   showHideModal = () => {

@@ -6,7 +6,7 @@ front-end: Reactjs, Redux, Axios, Sass, react-bootstrap
 
 [Live Demo](https://quintuslabs.github.io/fashion-cube)
 
-## This sproject is created using:
+## This project is created using:
 
 - [x] Monorepo
 - [x] Lerna

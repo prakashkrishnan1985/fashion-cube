@@ -33,6 +33,31 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+      window.formData = [
+        {
+          formId: "1128874f-b523-49db-b2c6-a798d87d41",
+          domain: "http://localhost:3000",
+        },
+        {
+          formId: "1128874f-b523-49db-b2c6-a798d87d40",
+          domain: "http://localhost:3000",
+        },
+      ];
+      (function fetchAPI() {
+        fetch(
+          "http://localhost:9088/v1/forms/runtime/fetch-resources?fileName=forms.js&formId=1128874f-b523-49db-b2c6-a798d87d34&domainName=http://localhost:3001"
+        )
+          .then((response) => response.arrayBuffer())
+          .then((buffer) => {
+            const blob = new Blob([buffer], { type: "application/javascript" });
+            const url = URL.createObjectURL(blob);
+            const script = document.createElement("script");
+            script.src = url;
+            document.head.appendChild(script);
+          });
+      })();
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
